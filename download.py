@@ -28,13 +28,12 @@ def download():
     datafile = open("raw/alldata.json", "wb")
     pickle.dump(data, datafile, pickle.HIGHEST_PROTOCOL)
     datafile.close()
-    print(data)
 
     print(str(len(data)) + " users founded")
 
     for userId in data.keys():
         userdata = data[userId]
-        print("\n\nUser Id: " + userId)
+        print("\nUser Id: " + userId)
         print(str(len(userdata)) + " record found for this user! wait till download records, i only download not processed records!")
         for recordId in userdata:
             record = userdata[recordId]
