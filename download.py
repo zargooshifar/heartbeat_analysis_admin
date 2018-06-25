@@ -17,7 +17,6 @@ def download():
     })
     bucket = storage.bucket()
 
-    print(bucket.path)
 
     ref = db.reference("users")
     data = ref.get()
